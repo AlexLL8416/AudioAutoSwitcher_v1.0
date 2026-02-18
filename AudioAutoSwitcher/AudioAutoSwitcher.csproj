@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework> 
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms> 
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AudioSwitcher.AudioApi.CoreAudio" Version="3.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\icons\*.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

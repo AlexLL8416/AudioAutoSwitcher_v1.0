@@ -1,0 +1,29 @@
+# --- Build Results (Lo que compila Visual Studio) ---
+[Bb]in/
+[Oo]bj/
+
+# --- Visual Studio User Specific (Tus configuraciones personales de ventanas) ---
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# --- Temporary Files (Archivos temporales) ---
+*.log
+*.tmp
+*.cache
+
+# --- OS Generated (Basura de Windows/Mac) ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- JSON Configs (OPCIONAL) ---
+# Si NO quieres subir tu configuración personal de audio (tus IDs), descomenta la siguiente línea:
+audio_config.json
+
+# --- NOTA IMPORTANTE SOBRE TUS ICONOS ---
+# Git ignorará 'bin/', pero tus iconos deben estar en 'Assets/' dentro del proyecto.
+# Asegúrate de que la carpeta 'Assets' NO está solo dentro de 'bin'.
