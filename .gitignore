@@ -1,19 +1,28 @@
+# --- Build Results (Lo que compila Visual Studio) ---
 [Bb]in/
 [Oo]bj/
 
+# --- Carpetas del Instalador (.vdproj) ---
+[Dd]ebug/
+[Rr]elease/
+
+# --- Visual Studio User Specific ---
 .vs/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
+# --- Temporary Files ---
 *.log
 *.tmp
 *.cache
 
+# --- OS Generated ---
 .DS_Store
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 
+# --- Configuraciones locales ---
 audio_config.json
