@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Windows.Forms;
 using AudioAutoSwitcher.Models;
@@ -11,7 +12,23 @@ namespace AudioAutoSwitcher.Configuration
 {
     public static class ConfigSaveLoad
     {
-        private readonly static string FilePath = "audio_config.json";
+        private static string GetConfigFilePath()
+        {
+            // Busco la carpeta AppData/Roaming del usuario actual
+            string appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            
+            // Creo una subcarpeta
+            string appFolder = Path.Combine(appData, "AudioAutoSwitcher");
+            
+            if (!Directory.Exists(appFolder))
+            {
+                Directory.CreateDirectory(appFolder);
+            }
+            // Devuelvo ruta completa del .json
+            return Path.Combine(appFolder, "audio_config.json");
+        }
+
+        private static readonly string FilePath = GetConfigFilePath(); 
 
         public static void SaveConfig(List<AudioProfile> devices)
         {
